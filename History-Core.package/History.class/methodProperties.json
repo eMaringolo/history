@@ -1,0 +1,27 @@
+{
+	"class" : {
+		"of:selector:" : "EstebanMaringolo 12/16/2015 23:37",
+		"of:withAll:" : "EstebanMaringolo 12/16/2015 23:37",
+		"of:withAll:selector:" : "EstebanMaringolo 12/16/2015 23:37",
+		"withAll:" : "EstebanMaringolo 12/16/2015 23:37" },
+	"instance" : {
+		"add:" : "EstebanMaringolo 12/14/2015 12:00",
+		"addAll:" : "EstebanMaringolo 12/14/2015 12:00",
+		"at:" : "EstebanMaringolo 12/14/2015 12:00",
+		"at:ifAbsent:" : "EstebanMaringolo 12/16/2015 16:07",
+		"detect:ifNone:" : "EstebanMaringolo 12/16/2015 16:56",
+		"elements" : "EstebanMaringolo 12/14/2015 12:00",
+		"from:to:" : "EstebanMaringolo 12/16/2015 16:56",
+		"initializeElements" : "EstebanMaringolo 12/16/2015 23:47",
+		"latest" : "EstebanMaringolo 12/14/2015 12:00",
+		"lookupApplicableAt:" : "EstebanMaringolo 12/16/2015 17:06",
+		"lookupElementAt:" : "EstebanMaringolo 12/16/2015 17:03",
+		"lookupElementsFrom:to:" : "EstebanMaringolo 12/14/2015 12:00",
+		"lookupMatchAt:" : "EstebanMaringolo 12/16/2015 17:03",
+		"owner" : "EstebanMaringolo 12/14/2015 12:00",
+		"owner:" : "EstebanMaringolo 12/14/2015 12:00",
+		"remove:" : "EstebanMaringolo 12/14/2015 12:00",
+		"select:" : "EstebanMaringolo 12/14/2015 12:00",
+		"setElements:" : "EstebanMaringolo 12/16/2015 23:47",
+		"size" : "EstebanMaringolo 12/14/2015 12:00",
+		"value:value:" : "EstebanMaringolo 12/16/2015 17:02" } }

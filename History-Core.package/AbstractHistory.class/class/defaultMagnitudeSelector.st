@@ -1,0 +1,3 @@
+as yet uncategorized
+defaultMagnitudeSelector
+	^ DefaultMagnitudeSelector
