@@ -1,0 +1,15 @@
+{
+	"category" : "History-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "EstebanMaringolo 12/16/2015 15:58",
+	"instvars" : [
+		"magnitude",
+		"tag" ],
+	"name" : "HistoryTestElement",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

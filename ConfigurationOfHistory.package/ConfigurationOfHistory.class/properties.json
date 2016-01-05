@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfHistory",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfHistory",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
