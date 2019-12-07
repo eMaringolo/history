@@ -78,6 +78,11 @@ History >> detect: aBlock ifNone: exceptionBlock [
 	^ self elements detect: aBlock ifNone: exceptionBlock
 ]
 
+{ #category : #iterating }
+History >> do: aBlockClosure [ 
+	self elements do: aBlockClosure 
+]
+
 { #category : #accessing }
 History >> elements [
 	"Return the value of elements."
@@ -91,6 +96,18 @@ History >> from: aDate to: anotherDate [
 	"Answer the elements of receiver which is located between aDate and anotherDate in time."
 
 	^ self lookupElementsFrom: aDate to: anotherDate
+]
+
+{ #category : #testing }
+History >> glorpIsCollection [
+
+	^true
+]
+
+{ #category : #persistence }
+History >> glorpRegisterCollectionInternalsIn: anObjectTransaction [ 
+
+	self elements glorpRegisterCollectionInternalsIn: anObjectTransaction
 ]
 
 { #category : #initializing }
