@@ -98,18 +98,6 @@ History >> from: aDate to: anotherDate [
 	^ self lookupElementsFrom: aDate to: anotherDate
 ]
 
-{ #category : #testing }
-History >> glorpIsCollection [
-
-	^true
-]
-
-{ #category : #persistence }
-History >> glorpRegisterCollectionInternalsIn: anObjectTransaction [ 
-
-	self elements glorpRegisterCollectionInternalsIn: anObjectTransaction
-]
-
 { #category : #initializing }
 History >> initializeElements [
 	"Private - Initializes the elements of receiver."
@@ -181,6 +169,12 @@ History >> remove: anObject [
 	self elements remove: anObject ifAbsent: []
 ]
 
+{ #category : #removing }
+History >> removeAll [
+
+	self elements removeAll
+]
+
 { #category : #enumerating }
 History >> select: aBlock [
 	"Answer the elements of the receiver for which the evaluation 
@@ -209,4 +203,10 @@ History >> value: a value: b [
 
 	| dateS |
 	^ (b perform: (dateS := self magnitudeSelector)) < (a perform: dateS)
+]
+
+{ #category : #iterating }
+History >> writeStream [
+	
+	^WriteStream on: self elements
 ]
