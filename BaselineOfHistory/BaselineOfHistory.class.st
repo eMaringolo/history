@@ -15,6 +15,6 @@ BaselineOfHistory >> baseline: spec [
 				with: [ spec requires: 'History-Core' ].
 			spec group: 'default' with: #('History-Tests').
 			spec
-				group: 'core';
+				group: 'core'
 				with: #('History-Core') ]
 ]
