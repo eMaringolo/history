@@ -14,7 +14,7 @@ Class {
 		'owner',
 		'elements'
 	],
-	#category : 'History-Core'
+	#category : #'History-Core'
 }
 
 { #category : #'instance-creation' }
@@ -70,6 +70,11 @@ History >> at: aDate ifAbsent: aBlock [
 	^ (self lookupElementAt: aDate) ifNil: [ aBlock value ]
 ]
 
+{ #category : #accessing }
+History >> basicElements [
+	^elements
+]
+
 { #category : #enumerating }
 History >> detect: aBlock ifNone: exceptionBlock [
 	"Answer the first element of the receiver for which the evaluation 
@@ -88,7 +93,14 @@ History >> elements [
 	"Return the value of elements."
 
 	elements isNil ifTrue: [self initializeElements].
+	(elements isKindOf: SortedCollection) ifFalse: [ self ensureSortedElements ].
 	^elements
+]
+
+{ #category : #accessing }
+History >> ensureSortedElements [
+
+	elements := elements asSortedCollection: self
 ]
 
 { #category : #accessing }
@@ -186,7 +198,7 @@ History >> select: aBlock [
 { #category : #initializing }
 History >> setElements: aCollection [
 
-	elements := (aCollection asSortedCollection: self)
+	elements := aCollection
 ]
 
 { #category : #accessing }
