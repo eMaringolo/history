@@ -47,6 +47,15 @@ HistoryGroup class >> defaultOwnerSelector: aSymbol [
 ]
 
 { #category : #'instance-creation' }
+HistoryGroup class >> magnitude: aSymbol owner: ownerSymbol [
+
+	^ self new
+		  magnitudeSelector: aSymbol;
+		  ownerSelector: ownerSymbol;
+		  yourself
+]
+
+{ #category : #'instance-creation' }
 HistoryGroup class >> withAll: aCollection [
 	^self new
 		setHistories: aCollection;

@@ -71,6 +71,14 @@ History >> at: aDate ifAbsent: aBlock [
 ]
 
 { #category : #accessing }
+History >> at: aDate ifPresent: foundBlock ifAbsent: aBlock [
+
+	^ (self lookupElementAt: aDate)
+		  ifNil: [ aBlock value ]
+		  ifNotNil: [ :elem | foundBlock value: elem ]
+]
+
+{ #category : #accessing }
 History >> basicElements [
 	^elements
 ]
