@@ -167,6 +167,20 @@ History >> lookupMatchAt: aDate [
 	^ self elements detect: [ :one | (one perform: self magnitudeSelector) = aDate ] ifNone: [ nil ]
 ]
 
+{ #category : #operations }
+History >> merge: otherHistory compareBlock: aBlock [
+
+	otherHistory do: [ :otherElem | 
+		| magnitude |
+		magnitude := otherElem perform: self magnitudeSelector.
+		self
+			at: magnitude
+			ifPresent: [ :elem | 
+				(aBlock value: elem value: otherElem) ifFalse: [ 
+					self add: otherElem ] ]
+			ifAbsent: [ self add: otherElem ] ]
+]
+
 { #category : #accessing }
 History >> owner [
 	"Return the value of owner."
